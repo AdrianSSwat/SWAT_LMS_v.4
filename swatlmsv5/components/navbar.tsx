@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
+import DropdownMenu from './dropdown'
+import Link from 'next/link'
 
 const navbar = () => {
   return (
@@ -17,12 +19,11 @@ const navbar = () => {
             />
           </a>
           <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-            <a className="mr-5 hover:text-gray-900 dark:text-gray-100">Home</a>
-            <a className="mr-5 hover:text-gray-900 dark:text-gray-100">Category</a>
-            <a className="mr-5 hover:text-gray-900 dark:text-gray-100">About</a>
+            <a href="/" className="mr-5 hover:text-gray-900 dark:text-gray-100">Home</a>
+            <DropdownMenu />
           </nav>
           <button className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
-            Helpdesk
+            <Link href="mailto:helpdesk@gradstt.com">Helpdesk</Link>
             <svg
               fill="none"
               stroke="currentColor"
